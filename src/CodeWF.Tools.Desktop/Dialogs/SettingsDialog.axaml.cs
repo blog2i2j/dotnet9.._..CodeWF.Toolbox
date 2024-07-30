@@ -1,3 +1,5 @@
+using CodeWF.Tools.Core.IServices;
+
 namespace CodeWF.Tools.Desktop.Dialogs;
 
 public partial class SettingsDialog : UserControl

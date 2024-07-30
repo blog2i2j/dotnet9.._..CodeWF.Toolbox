@@ -1,4 +1,7 @@
-﻿using CodeWF.Tools.Helpers;
+﻿using CodeWF.LogViewer.Avalonia.Log4Net;
+using CodeWF.Tools.Core.IServices;
+using CodeWF.Tools.EventBus.Commands;
+using CodeWF.Tools.Helpers;
 
 namespace CodeWF.Tools.Desktop.Services;
 
@@ -38,7 +41,6 @@ public class SystemService(IEventBus eventBus) : ISystemService
         LogFactory.Instance.Log.Info($"切换主题为{app.RequestedThemeVariant}");
         _eventBus.Publish(new UpdateThemeCommand(app.RequestedThemeVariant));
     }
-
     public void ChangeTheme()
     {
         Application? app = Application.Current;

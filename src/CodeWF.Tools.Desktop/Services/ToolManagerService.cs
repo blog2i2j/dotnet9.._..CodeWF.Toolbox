@@ -33,7 +33,7 @@ internal class ToolManagerService : IToolManagerService
         ToolMenuItem? toolGroup = MenuItems.FirstOrDefault(item => item.Group == group);
         if (toolGroup == null)
         {
-            string desc = group.GetDescription();
+            string desc = group.Description();
             toolGroup = new ToolMenuItem
             {
                 Group = group,
